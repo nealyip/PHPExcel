@@ -90,7 +90,7 @@ class PHPExcel_Writer_PDF_tcPDF extends PHPExcel_Writer_PDF_Core implements PHPE
 
         //  Create PDF
         $pdf = new TCPDF($orientation, 'pt', $paperSize);
-        $pdf->setFontSubsetting(false);
+        $pdf->setFontSubsetting(true);
         //    Set margins, converting inches to points (using 72 dpi)
         $pdf->SetMargins($printMargins->getLeft() * 72, $printMargins->getTop() * 72, $printMargins->getRight() * 72);
         $pdf->SetAutoPageBreak(true, $printMargins->getBottom() * 72);
